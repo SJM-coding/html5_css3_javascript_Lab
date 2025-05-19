@@ -1,0 +1,47 @@
+<!-- book.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/form.css" />
+  <title>도서 관리 시스템</title>
+</head>
+<body>
+  <h1>도서 관리 시스템</h1>
+
+  <div class="form-container">
+    <h2>도서 등록</h2>
+    <form id="bookForm">
+      <div class="form-grid">
+        <input type="text" name="title" placeholder="제목" required />
+        <input type="text" name="author" placeholder="저자" required />
+        <input type="text" name="isbn" placeholder="ISBN" required />
+        <input type="number" name="price" placeholder="가격" required />
+        <input type="date" name="publishDate" placeholder="출판일" />
+        <button type="submit">도서 등록</button>
+        <button type="button" class="cancel-btn" style="display: none;">취소</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="table-container">
+    <h2>도서 목록</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>제목</th>
+          <th>저자</th>
+          <th>ISBN</th>
+          <th>가격</th>
+          <th>출판일</th>
+          <th>액션</th>
+        </tr>
+      </thead>
+      <tbody id="bookTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="js/form01.js"></script>
+</body>
+</html>
